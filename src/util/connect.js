@@ -149,6 +149,7 @@ function makeBridge(bridgeUrl) {
           // There's a bug in Hue where reading out light state is different than updating.
           // await setLightState(lightId, d)
           await setLightState(lightId, {
+            on: sceneLights[lightId].state['on'],
             hue: sceneLights[lightId].state['hue'],
             bri: sceneLights[lightId].state['bri'],
             xy: sceneLights[lightId].state['xy'],
