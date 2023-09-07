@@ -8,11 +8,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "rm -rf build && flow-remove-types src --out-dir build && node build/index.js"
+    "start": "rm -rf build && flow-remove-types src --out-dir build && node build/index.js",
+    "build": "rm -rf build && flow-remove-types src --out-dir build"
   },
   "dependencies": {
     "axios": "^0.26.0",
     "chalk": "^5.0.0",
+    "deep-object-diff": "^1.1.9",
+    "delay": "^6.0.0",
     "dotenv-defaults": "^5.0.0",
     "parsenv": "^1.0.2",
     "readline-sync": "^1.4.10"
