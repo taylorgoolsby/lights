@@ -102,6 +102,9 @@ function makeBridge(bridgeUrl) {
   }
 
   async function saveCurrentScene(sceneId: string) {
+    console.log(chalk.bgYellow.bold('\n  Confirm  '))
+    readline.keyInPause('Are you sure?');
+
     try {
       const lights = await listLights()
       sceneData = {
